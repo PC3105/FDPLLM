@@ -1,1 +1,13 @@
+import spacy
 
+# Load the pre-trained English language model
+nlp = spacy.load("en_core_web_md")
+
+# Create word vectors for 'dog' and 'cat'
+word1 = nlp("dog")
+word2 = nlp("cat")
+
+# Calculate the cosine similarity between the two words
+similarity = word1.similarity(word2)
+
+print(f"Similarity between 'dog' and 'cat': {similarity:.2f}")
